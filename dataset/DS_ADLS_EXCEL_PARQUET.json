@@ -1,0 +1,24 @@
+{
+	"name": "DS_ADLS_EXCEL_PARQUET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_EXCEL_PARQUET",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(\n    'Excel/',\n    formatdatetime(utcNow(), 'yyyy'), '/',\n    formatdatetime(utcNow(), 'MM'), '/',\n    formatdatetime(utcNow(), 'dd')\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

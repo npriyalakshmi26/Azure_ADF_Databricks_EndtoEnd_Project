@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQLSERVER_TABLE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\MSSQLSERVER01",
+			"database": "VB_ADEProject",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "PriyAcer",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1ZDRmMzBlNi1iYzI1LTQ3Y2MtYWMzOC1kOTMzYjRjMzQ0Y2IiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHostedIntegrationRuntime01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

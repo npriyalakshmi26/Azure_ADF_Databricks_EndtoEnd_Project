@@ -1,0 +1,28 @@
+{
+	"name": "Tr_sample_snowflake",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_SNOWFLAKE_ADLS",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Trigger": "Tr_sample_snowflake"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/input/blobs/snowflake",
+			"blobPathEndsWith": ".parquet",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/965dce56-5311-4fab-a9e2-348c80333186/resourceGroups/RG_EndtoEnd_Project01/providers/Microsoft.Storage/storageAccounts/blobsnowsrc01",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
